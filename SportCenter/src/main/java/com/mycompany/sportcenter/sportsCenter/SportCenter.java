@@ -22,4 +22,16 @@ public class SportCenter {
     public void addScenario (Scenario scenario){
         this.scenarios.add(scenario);
     }
+    
+    public void bookScenario(Scenario scenario){ //Para resrvar un escenario
+        int index = this.scenarios.indexOf(scenario);
+        Scenario sc = this.scenarios.get(index);
+        
+        if(sc.isAvailable()){
+            System.out.println("Ohh yeah!!!"); //En casdo de que si pueda resrvar el escenario
+            sc.setAvailable(false);
+        } else {
+            System.out.println("Sorry :( esta ocupado"); //En caso que el ascenario ya este reservado
+        }
+    }
 }

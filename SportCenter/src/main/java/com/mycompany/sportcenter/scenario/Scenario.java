@@ -15,6 +15,14 @@ public class Scenario {
         this.schedule = schedule;
         this.available = true;
     }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
     
     
 }
